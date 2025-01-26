@@ -1,0 +1,15 @@
+li {
+    padding: 1rem;
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+
+li button{
+
+    background-color: transparent;
+}

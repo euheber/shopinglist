@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-family: "Roboto", serif;
+  }
+  
+  :root {
+    --white: #d7d7d8;
+    --black: rgb(56, 56, 56);
+    --green: #49cd5c;
+    --black-bg: #2d2e37;
+    --input-bg: #3a3940;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--black-bg);
+  }
+  
+  .mainContainerAcessPage {
+    width: 26.563rem;
+    height: 100vh;
+    padding: 0.938rem;
+    background-color: var(--black-bg);
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .listItemsContainer{ 
+    margin-top: 2rem;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--green);
+      border-radius: 0.625rem;
+    }
+  }
+
+
+  .owner{ 
+    font-size: 0.8rem;
+    color: var(--green);
+  }
+  
