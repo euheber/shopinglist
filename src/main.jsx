@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}/>  
-      <Route path="access/id" element={<ListAccess />}></Route>
+      <Route path="access/:id" element={<ListAccess />}></Route>
     </Routes>
   </BrowserRouter>,
 )

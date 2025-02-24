@@ -1,10 +1,13 @@
 import Input from "../../components/inputs";
+import QuestionMarkIcon from "../../assets/question_mark_icon"
+import ModalPopUp from "../../components/modal";
 import { useEffect, useRef, useState } from "react";
 import './app.css'
 
 function App() {
+  const [modalIsOpen, setModal] = useState(false)
   const containerRef = useRef(null)
-  let [inputValue, setInputValue] = useState({
+  const [inputValue, setInputValue] = useState({
     owner: "",
     event_name: "",
     endsAt: "",
@@ -101,10 +104,8 @@ const checkFieldsAndPost = () => {
     <>
       <main>
         <div className="mainContainer">
-
-
-          <div className="teste">
-          <h1>Crie sua lista de compras</h1>
+          <div className="header">
+          <h1>Crie sua lista de compras</h1> <button className="questionMarkIcon" onClick={() => setModal(prev => !prev)}><QuestionMarkIcon /> </button>
           
             <input placeholder={"Nome do evento"} value={inputValue.event_name} onChange={(event) => handleChange(event, "event_name")} className="inputUI"/>
             <input placeholder={"Seu email"} value={inputValue.owner} onChange={(event) => handleChange(event, "owner")} className="inputUI"/>
@@ -122,7 +123,9 @@ const checkFieldsAndPost = () => {
           <button className="button create" onClick={checkFieldsAndPost}>Criar lista</button>
           </div>
 
+        {modalIsOpen ? <ModalPopUp /> : null}
         </div>
+
       </main>
     </>
   );

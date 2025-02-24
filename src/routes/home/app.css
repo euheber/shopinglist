@@ -7,7 +7,11 @@
   border: none;
   outline: none;
   color: var(--white);
-  font-family: "Roboto", serif;
+ font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
 }
 
 :root {
@@ -16,12 +20,6 @@
   --green: #49cd5c;
   --black-bg: #2d2e37;
   --input-bg: #3a3940;
-}
-
-.inputContainer {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
 }
 
 
@@ -33,6 +31,21 @@ body {
   background-color: var(--black-bg);
 }
 
+.header{
+  position: relative;
+}
+
+.questionMarkIcon{
+  border: 1px solid var(--green);
+  background-color: transparent;
+  border-radius: 1.5rem;
+  width: 30px;
+  height: 30px;
+  position: absolute; 
+  top: 0;
+  right: 0;
+}
+
 .mainContainer {
   width: 26.563rem;
   height: 100vh;
@@ -42,25 +55,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 h1 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.inputUI {
-  color: var(--black);
-  display: block;
-  width: 100%;
-  margin-top: 0.1rem;
-  padding: 1rem;
-  background-color: var(--input-bg);
-  color: var(--white);
-}
-
-.inputUI.item {
-  width: 100%;
-}
 
 .inputDate {
   color: var(--green);
@@ -88,7 +90,6 @@ h1 {
 }
 
 .itensContainer {
-
   height: 60%;
   margin-top: 1rem;
   padding-bottom: 1rem;

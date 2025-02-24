@@ -1,3 +1,5 @@
+import "./inputs.css"
+
 function Input({value, onChange, placeholder, onClick, id}) {
 
   return (
